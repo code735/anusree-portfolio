@@ -1,10 +1,11 @@
-:root {
+ :root {
   --logo-clr: black;
   --menu-links-clr: white;
   --body-bg: #dcd4cb;
   --menu-slide: #0000000d;
   --menu-icon-clr: white;
   --btn: black;
+  --hero-text: white;
 }
 * {
   padding: 0;
@@ -89,21 +90,25 @@ a {
 .menu-links a {
   color: var(--menu-links-clr);
   font-weight: 500;
-  font-size: 1.8em;
+  font-size: 2.2em;
 }
 
 /* Hero-sec */
-.hero-img video {
-  height: 100vh;
+.hero-img img {
+  width: 100%;
+  border-radius: 20px;
 }
 
+.hero-img .d-flex {
+  height: 100%;
+}
 .hero-sec h1 {
-  font-size: 3.5em;
+  font-size: 2.5em;
 }
 
 .hero-sec p {
   font-size: 1.5em;
-  width: 70%;
+  width: 90%;
 }
 
 .resume-btn-shadow {
@@ -111,10 +116,11 @@ a {
   width: 110px;
   border-radius: 12px;
   transition: 0.2s;
+  background-color: #dcd4cb;
 }
 
 .resume-btn-shadow:hover {
-  box-shadow: 0px 0px 20px #808080;
+  box-shadow: 0px 0px 20px;
 }
 
 .resume-btn {
@@ -122,14 +128,25 @@ a {
   width: 110px;
   border-radius: 12px;
   transition: 0.5s;
+  font-size: 1.3em;
+  color: var(--btn);
+  background-color: #dcd4cb;
 }
 
 .resume-btn:hover {
   box-shadow: none;
 }
 
-.resume-btn a {
-  font-size: 1.3em;
-  color: var(--btn);
-  padding: 15px 20px;
+/* 320px to 576px */
+@media (min-width: 320px) and (max-width: 576px) {
+  /* Hero Section */
+  .text-content {
+    background-image: url(../Images/Background/hero-img.png);
+    background-size: cover;
+    background-position: center;
+    color: var(--hero-text);
+  }
+  .hero-sec p {
+    font-size: 1em;
+  }
 }
